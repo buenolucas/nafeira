@@ -1,0 +1,49 @@
+{
+  "name": "@nafeira/theme",
+  "version": "0.0.1",
+  "description": "NaFeira Theme and System",
+  "author": "Lucas Bueno <bueno@vulcanica.dev>",
+  "homepage": "https://github.com/buenolucasnafeira#readme",
+  "license": "MIT",
+  "source": "src/index.ts",
+  "main": "dist/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "src/nafeira.tokens.json",
+    "src"
+  ],
+  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/buenolucas/nafeira.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build:transform": "node scripts/transform.js",
+    "build": "tsup tsup src/index.ts --loader .ts=tsx --minify --format esm,cjs --dts --sourcemap --legacy-output --external react --clean @stitches/react",
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "dev": "tsup src/index.ts --format esm,cjs --watch --dts --legacy-output --external react",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
+  },
+  "bugs": {
+    "url": "https://github.com/washingtonpost/wpds-ui-kit/issues"
+  },
+  "peerDependencies": {
+    "@stitches/react": "*"
+  },
+  "dependencies": {
+    "@stitches/react": "*"
+  },
+  "devDependencies": {
+    "@types/react": "18.0.14",
+    "@types/react-dom": "18.0.5",
+    "tsup": "^5.11.13",
+    "typescript": "4.5.5"
+  },
+  "gitHead": "dcdf670812681188707d23ae5e5aed42101360ac"
+}
