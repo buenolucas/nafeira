@@ -12,7 +12,13 @@
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
+  "dependencies": {
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
   "devDependencies": {
+    "@types/react": "18.0.14",
+    "@types/react-dom": "18.0.5",
     "eslint-config-custom": "workspace:*",
     "prettier": "latest",
     "turbo": "latest"
@@ -21,6 +27,5 @@
     "npm": ">=7.0.0",
     "node": ">=14.0.0"
   },
-  "dependencies": {},
   "packageManager": "pnpm@7.2.1"
 }
